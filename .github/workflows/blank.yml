@@ -1,15 +1,27 @@
-name: Run Code
+name: Frontend Workflow
 
 on:
   workflow_dispatch:
 
 jobs:
-  run-code:
+  frontend-build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: frontend
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Print Hello
-        run: echo "Hello, your workflow is working!"
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build frontend
+        run: npm run build
