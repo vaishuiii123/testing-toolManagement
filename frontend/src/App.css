@@ -1,0 +1,33 @@
+/* Custom styles matching original design */
+body {
+  font-family: Cambria, Georgia, serif;
+  font-size: 10pt;
+}
+
+/* Smooth scrolling for form */
+.max-h-\[85vh\] {
+  scroll-behavior: smooth;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th {
+  font-weight: bold;
+}
+
+table td,
+table th {
+  vertical-align: top;
+}
+
+/* Input styling */
+input,
+select,
+textarea {
+  font-size: 10pt;
+  font-family: Cambria, Georgia, serif;
+}
