@@ -2,13 +2,12 @@
   "name": "toolmgmt2-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/vaishuiii123/testing-toolManagement",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+},
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
     "jspdf": "^4.2.1",
